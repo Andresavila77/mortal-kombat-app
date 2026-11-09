@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   Alert,
-  Image,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -189,7 +188,9 @@ export default function App() {
       onPress={() => setSelectedCharacter(character)}
       activeOpacity={0.8}
     >
-      <Image source={character.image} style={styles.avatar} />
+      <View style={styles.avatarPlaceholder}>
+        <Text style={styles.placeholderMark}>MK</Text>
+      </View>
       <View style={styles.itemInfo}>
         <Text style={styles.itemTitle}>{character.name}</Text>
         <Text style={styles.itemSubtitle}>{character.origin}</Text>
@@ -230,7 +231,9 @@ export default function App() {
       onPress={() => setSelectedStage(stage)}
       activeOpacity={0.8}
     >
-      <Image source={stage.image} style={styles.stageThumb} />
+      <View style={styles.stagePlaceholder}>
+        <Text style={styles.placeholderMark}>ARENA</Text>
+      </View>
       <View style={styles.itemInfo}>
         <Text style={styles.itemTitle}>{stage.name}</Text>
         <Text style={styles.itemSubtitle}>
@@ -551,11 +554,9 @@ export default function App() {
 
             {selectedCharacter && (
               <>
-                <Image
-                  source={selectedCharacter.image}
-                  style={styles.detailImage}
-                  resizeMode="contain"
-                />
+                <View style={styles.detailPlaceholder}>
+                  <Text style={styles.detailPlaceholderMark}>MK</Text>
+                </View>
                 <Text style={styles.detailTitle}>
                   {selectedCharacter.name}
                 </Text>
@@ -609,11 +610,9 @@ export default function App() {
 
             {selectedStage && (
               <>
-                <Image
-                  source={selectedStage.image}
-                  style={styles.detailImage}
-                  resizeMode="contain"
-                />
+                <View style={styles.detailPlaceholder}>
+                  <Text style={styles.detailPlaceholderMark}>ARENA</Text>
+                </View>
                 <Text style={styles.detailTitle}>{selectedStage.name}</Text>
                 <Text style={styles.subheading}>Descripción</Text>
                 <Text style={styles.paragraph}>
@@ -843,6 +842,49 @@ const styles = StyleSheet.create({
     height: 55,
     borderRadius: 6,
     backgroundColor: "#27272a",
+  },
+  avatarPlaceholder: {
+    width: 58,
+    height: 58,
+    borderRadius: 10,
+    backgroundColor: "#3f1518",
+    borderWidth: 1,
+    borderColor: "#dc2626",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  stagePlaceholder: {
+    width: 75,
+    height: 55,
+    borderRadius: 6,
+    backgroundColor: "#27272a",
+    borderWidth: 1,
+    borderColor: "#a16207",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  placeholderMark: {
+    color: "#eab308",
+    fontSize: 13,
+    fontWeight: "900",
+    letterSpacing: 1,
+  },
+  detailPlaceholder: {
+    width: "100%",
+    height: 200,
+    backgroundColor: "#18181b",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#a16207",
+    marginBottom: 15,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  detailPlaceholderMark: {
+    color: "#eab308",
+    fontSize: 52,
+    fontWeight: "900",
+    letterSpacing: 5,
   },
   itemInfo: {
     flex: 1,
