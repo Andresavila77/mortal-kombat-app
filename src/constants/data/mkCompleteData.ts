@@ -12,7 +12,6 @@ export interface Character {
   babality: string;
   friendship: string;
   type: CharacterType;
-  image: number;
 }
 
 export interface Realm {
@@ -27,7 +26,6 @@ export interface Stage {
   name: string;
   description: string;
   hasStageFatality: boolean;
-  image: number;
 }
 
 export const mkCompleteData: Character[] = [
@@ -43,7 +41,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Liu Kang.jpeg"),
   },
   {
     id: "2",
@@ -57,7 +54,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Kung lao.jpeg"),
   },
   {
     id: "3",
@@ -71,7 +67,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Jhonny cage.jpeg"),
   },
   {
     id: "4",
@@ -85,7 +80,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Reptile.jpeg"),
   },
   {
     id: "5",
@@ -99,7 +93,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Sub-zero.jpeg"),
   },
   {
     id: "6",
@@ -113,7 +106,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Shang tsung.jpeg"),
   },
   {
     id: "7",
@@ -127,7 +119,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Kitana.jpeg"),
   },
   {
     id: "8",
@@ -141,7 +132,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Jax.jpeg"),
   },
   {
     id: "9",
@@ -155,7 +145,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Mileena.jpeg"),
   },
   {
     id: "10",
@@ -169,7 +158,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Baraka.jpeg"),
   },
   {
     id: "11",
@@ -183,7 +171,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Scorpion.jpeg"),
   },
   {
     id: "12",
@@ -197,7 +184,6 @@ export const mkCompleteData: Character[] = [
     babality: "Consulta los movimientos de la versión que estás jugando.",
     friendship: "Consulta los movimientos de la versión que estás jugando.",
     type: "fighter",
-    image: require("../../../assets/images/Raiden.jpeg"),
   },
   {
     id: "13",
@@ -211,7 +197,6 @@ export const mkCompleteData: Character[] = [
     babality: "No disponible como personaje seleccionable normal.",
     friendship: "No disponible como personaje seleccionable normal.",
     type: "boss",
-    image: require("../../../assets/images/Shao kahn.jpeg"),
   },
   {
     id: "14",
@@ -225,7 +210,6 @@ export const mkCompleteData: Character[] = [
     babality: "No disponible como personaje seleccionable normal.",
     friendship: "No disponible como personaje seleccionable normal.",
     type: "boss",
-    image: require("../../../assets/images/kintaro.jpeg"),
   },
   {
     id: "15",
@@ -239,7 +223,6 @@ export const mkCompleteData: Character[] = [
     babality: "Puede variar según la versión.",
     friendship: "Puede variar según la versión.",
     type: "secret",
-    image: require("../../../assets/images/Smoke.jpeg"),
   },
   {
     id: "16",
@@ -253,7 +236,6 @@ export const mkCompleteData: Character[] = [
     babality: "Puede variar según la versión.",
     friendship: "Puede variar según la versión.",
     type: "secret",
-    image: require("../../../assets/images/Jade.jpeg"),
   },
   {
     id: "17",
@@ -267,7 +249,6 @@ export const mkCompleteData: Character[] = [
     babality: "Puede variar según la versión.",
     friendship: "Puede variar según la versión.",
     type: "secret",
-    image: require("../../../assets/images/Noob saibot.jpeg"),
   },
 ];
 
@@ -304,69 +285,59 @@ export const mkStagesData: Stage[] = [
     name: "Dead Pool",
     description: "Escenario con un estanque mortal y una ambientación industrial.",
     hasStageFatality: true,
-    image: require("../../../assets/images/Dead_pool.jpeg"),
   },
   {
     id: "s2",
     name: "Kombat Tomb",
     description: "Tumba oscura con trampas y elementos ceremoniales.",
     hasStageFatality: true,
-    image: require("../../../assets/images/kombat_tomb.jpeg"),
   },
   {
     id: "s3",
     name: "Wastelands",
     description: "Territorio desértico y peligroso de Outworld.",
     hasStageFatality: false,
-    image: require("../../../assets/images/Wasteland.jpeg"),
   },
   {
     id: "s4",
     name: "The Portal",
     description: "Portal místico entre reinos, relacionado con encuentros secretos.",
     hasStageFatality: false,
-    image: require("../../../assets/images/Portal.jpeg"),
   },
   {
     id: "s5",
     name: "The Pit II",
     description: "Puente elevado bajo la luna sobre un peligroso abismo.",
     hasStageFatality: true,
-    image: require("../../../assets/images/The_Pit_II.jpeg"),
   },
   {
     id: "s6",
     name: "Armory",
     description: "Armería de Outworld con armas y elementos de forja.",
     hasStageFatality: false,
-    image: require("../../../assets/images/The_armory.jpeg"),
   },
   {
     id: "s7",
     name: "Tower",
     description: "Torre elevada de combate con arquitectura imponente.",
     hasStageFatality: false,
-    image: require("../../../assets/images/The_tower.jpeg"),
   },
   {
     id: "s8",
     name: "Living Forest",
     description: "Bosque místico cuyos árboles parecen tener vida.",
     hasStageFatality: false,
-    image: require("../../../assets/images/Living_Forest.jpeg"),
   },
   {
     id: "s9",
     name: "Kahn's Arena",
     description: "Arena imperial de Shao Kahn.",
     hasStageFatality: false,
-    image: require("../../../assets/images/Kahn's_Arena.jpeg"),
   },
   {
     id: "s10",
     name: "Goro's Lair",
     description: "Guarida oscura que recuerda los combates del primer torneo.",
     hasStageFatality: false,
-    image: require("../../../assets/images/Goro_s_lair.jpeg"),
   },
 ];
